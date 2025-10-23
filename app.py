@@ -2,7 +2,6 @@ from flask import Flask, request
 import math
 import time
 
-
 app = Flask(__name__)
 
 @app.route("/")
@@ -49,4 +48,4 @@ def memory():
     return f"Consumed {mb_to_consume} MB of memory for 10 seconds."
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=80)
+    app.run(host='0.0.0.0', port=8080)

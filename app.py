@@ -4,10 +4,9 @@ import time
 
 app = Flask(__name__)
 
-
 @app.route("/")
 def hello():
-    return "Hello from ECS Fargate! cicd completed"
+    return "Hello from ECS Fargate! cicd completed-03 test zaebalsa"
 @app.route("/heavy")
 def heavy():
     """

@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    return "Hello from ECS Fargate!"
+    return "Hello from ECS Fargate! cicd completed"
 @app.route("/heavy")
 def heavy():
     """

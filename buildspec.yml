@@ -26,6 +26,7 @@ phases:
       - echo Writing image definitions file...
       - printf '[{"name":"my-app-container","imageUri":"%s"}]' $IMAGE_URI > imagedefinitions.json
 
+      # артефакты
 artifacts:
   files:
     - appspec.yml

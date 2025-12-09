@@ -2,7 +2,7 @@
 set -e # Падать при ошибках, это важно
 
 # Находимся в папке scripts, наш файл лежит уровнем выше
-ENV_FILE="../deploy.env"
+ENV_FILE="deploy.env"
 
 if [ ! -f "$ENV_FILE" ]; then
     echo "ОШИБКА: Файл с переменными окружения '$ENV_FILE' не найден!" >&2

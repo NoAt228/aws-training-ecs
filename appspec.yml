@@ -1,0 +1,19 @@
+version: 0.0
+os: linux
+hooks:
+  # На этом этапе мы можем остановить старую версию приложения
+  ApplicationStop:
+    - location: scripts/stop_container.sh
+      timeout: 300
+      runas: ec2-user
+  # Перед установкой новой версии — логинимся в ECR
+  BeforeInstall:
+    - location: scripts/login_ecr.sh
+      timeout: 300
+      runas: ec2-user
+  # Основной этап — запускаем новый контейнер
+  ApplicationStart:
+    - location: scripts/start_container.sh
+      timeout: 300
+      runas: ec2-user
+

@@ -1,6 +1,7 @@
 #!/bin/bash
 set -e # Падать при ошибках, это важно, если не обрабатываем их явно.
 
+
 ENV_FILE="deploy.env"
 
 if [ ! -f "$ENV_FILE" ]; then
